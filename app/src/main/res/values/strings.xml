@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ERPSuperMarket</string>
+    <string name="stores">Stores</string>
+    <string name="products">Products</string>
+    <string name="recipes">Recipes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="store">Store</string>
+    <string name="deleteStore">Delete store</string>
+    <string name="accionDeleteStore">Deleting store</string>
+    <string name="deleteWarning">Delete store?</string>
+    <string name="deleteWarningTitle">Deleting store</string>
+    <string name="okButton">Ok</string>
+    <string name="editingStore">Editando almacen</string>
+    <string name="changeStoreName">Change store name</string>
+    <string name="storeName">Name</string>
+    <string name="newStore">New store</string>
+    <string name="createStore">Create store</string>
+</resources>

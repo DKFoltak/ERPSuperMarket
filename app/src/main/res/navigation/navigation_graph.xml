@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="edu.gustavo.erpsupermarket.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_storeListFragment"
+            app:destination="@id/storeListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="edu.gustavo.erpsupermarket.ProductListFragment"
+        android:label="ProductListFragment" >
+        <action
+            android:id="@+id/action_productListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeListFragment"
+        android:name="edu.gustavo.erpsupermarket.store.StoreListFragment"
+        android:label="StoreListFragment" >
+        <action
+            android:id="@+id/action_storeListFragment_to_productListFragment"
+            app:destination="@id/productListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="edu.gustavo.erpsupermarket.RecipeListFragment"
+        android:label="RecipeListFragment" >
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="edu.gustavo.erpsupermarket.ProductDetailFragment"
+        android:label="ProductDetailFragment" >
+        <action
+            android:id="@+id/action_productDetailFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_upsertProductFragment"
+            app:destination="@id/upsertProductFragment" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_stockDetailFragment"
+            app:destination="@id/stockDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upsertProductFragment"
+        android:name="edu.gustavo.erpsupermarket.UpsertProductFragment"
+        android:label="UpsertProductFragment" />
+    <fragment
+        android:id="@+id/stockDetailFragment"
+        android:name="edu.gustavo.erpsupermarket.StockDetailFragment"
+        android:label="StockDetailFragment" />
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="edu.gustavo.erpsupermarket.RecipeDetailFragment"
+        android:label="RecipeDetailFragment" >
+        <action
+            android:id="@+id/action_recipeDetailFragment_to_upsertRecipeFragment"
+            app:destination="@id/upsertRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upsertRecipeFragment"
+        android:name="edu.gustavo.erpsupermarket.UpsertRecipeFragment"
+        android:label="fragment_recipe_upsert"
+        tools:layout="@layout/fragment_recipe_upsert" />
+</navigation>
