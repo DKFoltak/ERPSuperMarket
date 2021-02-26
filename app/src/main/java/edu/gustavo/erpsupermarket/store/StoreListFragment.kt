@@ -1,9 +1,7 @@
 package edu.gustavo.erpsupermarket.store
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DefaultItemAnimator
@@ -29,6 +27,8 @@ class StoreListFragment : Fragment() {
                         (activity as MainActivity).mainViewModel.upsertStore(it.context, 0L)
                     }).show()
             }
+        activity?.setTitle(R.string.stores)
+        setHasOptionsMenu(true);
         return view
     }
 
@@ -45,6 +45,11 @@ class StoreListFragment : Fragment() {
         recyclerView.adapter = adapter
         recyclerView.itemAnimator = DefaultItemAnimator()
         recyclerView.layoutManager = GridLayoutManager(getContext(), 3)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        menu.clear()
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
 }

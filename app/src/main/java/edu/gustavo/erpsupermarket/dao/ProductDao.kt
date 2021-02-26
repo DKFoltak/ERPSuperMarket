@@ -11,7 +11,6 @@ interface ProductDao : EntityDao<Product> {
     @Query("SELECT * FROM ${Product.TABLE_NAME} ORDER BY ${Product.COLUMN_ID}")
     fun getProducts(): Flow<MutableList<Product>>
 
-    @Transaction
     @Query("SELECT * FROM ${Product.TABLE_NAME} INNER JOIN ${Stock.TABLE_NAME} ON ${Product.COLUMN_ID}=${Stock.COLUMN_PRODUCT} WHERE ${Stock.COLUMN_STORE} = :store")
     fun getProductsByStore(store: Long): Flow<MutableList<Product>>
 

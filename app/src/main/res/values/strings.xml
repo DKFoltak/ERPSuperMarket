@@ -16,4 +16,5 @@
     <string name="storeName">Name</string>
     <string name="newStore">New store</string>
     <string name="createStore">Create store</string>
+    <string name="mainActivityTitle">Local ERP purchase</string>
 </resources>

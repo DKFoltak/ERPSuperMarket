@@ -36,7 +36,6 @@ class MainViewModel(var application: Application,
         store = services.getStoreById(id)
     }
 
-
     fun upsertStore(context: Context, id: Long) {
         val editView = LayoutInflater.from(context).inflate(R.layout.store_name_input, null)
         val storeName = editView.findViewById<View>(R.id.store_edit_text) as EditText

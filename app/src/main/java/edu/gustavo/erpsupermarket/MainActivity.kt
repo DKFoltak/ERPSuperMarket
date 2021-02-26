@@ -6,7 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import edu.gustavo.erpsupermarket.viewModel.MainViewModel
 import edu.gustavo.erpsupermarket.viewModel.MainViewModelFactory
 
@@ -22,15 +22,12 @@ class MainActivity : AppCompatActivity() {
                     .replace(R.id.container, MainFragment())
                     .commitNow()
         }
-        navController = Navigation.findNavController(
-            this,
-            R.id.navigation_graph
-        )
+        navController = findNavController(R.id.nav_host_fragment)
+        setTitle(R.string.mainActivityTitle)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.menu, menu)
+        menuInflater.inflate(R.menu.menu, menu)
         return true
     }
 
